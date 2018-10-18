@@ -1,4 +1,5 @@
 #include "Pathfinder.h"
+#include <ifstream>
 #include <ctime>
 
 using namespace std;
@@ -55,6 +56,20 @@ void Pathfinder::createRandomMaze()
 
 bool Pathfinder::importMaze(string file_name)
 {
+    vector<int> 
+    
+    ifstream inputFile;
+    inputFile.open(file_name);
+    
+    char ch;
+    fstream fin(file_name, fstream::in);
+    while (fin >> noskipws >> ch)
+    {
+        if (ch == '0')
+        {
+        
+        }
+    }
 }
 
 vector<string> Pathfinder::solveMaze()
