@@ -175,69 +175,41 @@ bool Pathfinder::importMaze(string file_name)
     return true;
 }
 
-bool outOfBounds(int x, int a, int z)
-{
-    return (x < a || x > z);
-}
-
 bool Pathfinder::findPath (int x, int y, int z)
 {
-    path.push_back("(" + to_string(x) + ", " + to_string(y) + ", " + to_string(z) + ")");
-    /*
-    for (int zz = 0; zz < MAZE_SIZE; zz++)
+    if ((x >= 0 && x < MAZE_SIZE) && (y >= 0 && y < MAZE_SIZE) && (z >= 0 && z < MAZE_SIZE))
     {
-            for (int yy = 0; yy < MAZE_SIZE; yy++)
+         if(currentMaze[x][y][z] == 1)
         {
-                for (int xx = 0; xx < MAZE_SIZE; xx++)
-            {
-               cout << currentMaze[xx][yy][zz] << " ";
-            }
-            cout << endl;
+            path.push_back("(" + to_string(x) + ", " + to_string(y) + ", " + to_string(z) + ")");
         }
-        cout << endl;
+        else
+        {
+            currentMaze[x][y][z] = 0;
+            return false;
+        }
     }
-    cout << endl;
-    */
-    
-    
-    
-    bool xB = outOfBounds(x, 0, MAZE_SIZE - 1);
-    bool yB = outOfBounds(y, 0, MAZE_SIZE - 1);
-    bool zB = outOfBounds(z, 0, MAZE_SIZE - 1);
-    
-    if(!(x >= 0 && x < MAZE_SIZE) || !(y >= 0 && y < MAZE_SIZE) || !(z >= 0 && z < MAZE_SIZE))
+    else
     {
-        //cout << "ONEONEONE: " << currentMaze[x][y][z] << endl;
-        path.pop_back();
-        return false;
-    }
-    if(currentMaze[x][y][z] != 1)
-    {
-        //cout << "xyz " << x << y << z << endl;
-        //cout << "ZUBZUBZUB: " << currentMaze[x][y][z] << endl;
-        path.pop_back();
+        currentMaze[x][y][z] = 0;
         return false;
     }
     if (x >= MAZE_SIZE - 1 && y >= MAZE_SIZE - 1 && z >= MAZE_SIZE - 1)
     {
-        //cout << "TWOTWOTWO" << endl;
         return true;
     }
     
-    currentMaze[x][y][z] = 2;
+    currentMaze[x][y][z] = 2;   
     
     if(findPath(x + 1, y, z) || findPath(x - 1, y, z) || findPath(x, y + 1, z) || findPath(x, y - 1, z) || findPath(x, y, z + 1) || findPath(x, y, z - 1))
     {
-        //cout << "THREETHREETHREE" << endl;
-        //currentMaze[x][y][z] = 1;
-        //path.insert(path.begin(), ("(" + to_string(x) + ", " + to_string(y) + ", " + to_string(z) + ")"));
+        currentMaze[x][y][z] = 1;
         return true;
     }
     else
     {
-        //cout << "FOURFOURFOUR" << endl;
+        currentMaze[x][y][z] = 0;
         path.pop_back();
-        //currentMaze[x][y][z] = 1;
         return false;
     }
 }
@@ -276,10 +248,10 @@ vector<string> Pathfinder::solveMaze()
         }
     }
     
-    cout << "path: " << endl;
+    //cout << "path: " << endl;
     for(string s : path)
     {
-        cout << s << endl;
+        //cout << s << endl;
     }
     return path;
     
