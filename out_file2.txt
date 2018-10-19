@@ -1,11 +1,5 @@
 toString
--1943643608 1 1 1 1
 1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-
-32684 1 1 1 1
 1 1 1 1 1
 1 1 1 1 1
 1 1 1 1 1
@@ -21,15 +15,21 @@ toString
 1 1 1 1 1
 1 1 1 1 1
 1 1 1 1 1
-1 1 1 1 0
+1 1 1 1 1
 
 1 1 1 1 1
 1 1 1 1 1
 1 1 1 1 1
-1 1 1 1 0
-1 1 1 0 1
+1 1 1 1 1
+1 1 1 1 1
 
-importMaze Mazes/Invalid1.txt True
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+
+importMaze Mazes/Invalid1.txt False
 toString
 1 1 1 1 1
 1 1 1 1 1
@@ -58,10 +58,10 @@ toString
 1 1 1 1 1
 1 1 1 1 1
 1 1 1 1 1
-1 1 1 1 0
-1 1 1 0 1
+1 1 1 1 1
+1 1 1 1 1
 
-importMaze Mazes/Solvable1.txt True
+importMaze Mazes/Solvable1.txt False
 toString
 1 1 0 1 0
 0 0 0 1 0
@@ -93,39 +93,39 @@ toString
 0 0 0 0 0
 1 1 1 1 1
 
-importMaze Mazes/Invalid2.txt True
+importMaze Mazes/Invalid2.txt False
 toString
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
+1 1 0 1 0
+0 0 0 1 0
+1 1 1 1 0
+1 0 0 0 0
+1 0 0 0 0
+
+0 1 0 1 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 0 0 0 0
+
+0 1 0 1 0
+0 1 0 0 0
+0 1 1 1 0
+0 0 0 0 0
+1 0 0 0 0
+
+0 0 0 1 0
+0 0 0 0 0
+0 0 0 1 0
+0 0 0 0 0
+1 0 0 0 0
+
+0 0 0 1 0
+0 0 0 1 0
+0 0 0 1 0
+0 0 0 0 0
 1 1 1 1 1
 
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-
-importMaze Mazes/Invalid3.txt True
+importMaze Mazes/Invalid3.txt False
 importMaze Mazes/Invalid4.txt False
 importMaze Mazes/Invalid5.txt False
-importMaze Mazes/Nonexistant.txt True
+importMaze Mazes/Nonexistant.txt False
