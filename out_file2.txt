@@ -61,7 +61,7 @@ toString
 1 1 1 1 1
 1 1 1 1 1
 
-importMaze Mazes/Solvable1.txt False
+importMaze Mazes/Solvable1.txt True
 toString
 1 1 0 1 0
 0 0 0 1 0

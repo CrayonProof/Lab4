@@ -1,4 +1,4 @@
-importMaze Mazes/Solvable1.txt False
+importMaze Mazes/Solvable1.txt True
 toString 
 1 1 0 1 0
 0 0 0 1 0
@@ -30,7 +30,7 @@ toString
 0 0 0 0 0
 1 1 1 1 1
 
-importMaze Mazes/Solvable2.txt False
+importMaze Mazes/Solvable2.txt True
 toString
 1 0 1 1 1
 1 1 1 1 0
@@ -62,7 +62,7 @@ toString
 0 1 1 1 0
 0 1 1 1 1
 
-importMaze Mazes/Solvable3.txt False
+importMaze Mazes/Solvable3.txt True
 toString
 1 1 1 1 1
 1 1 1 1 1
@@ -94,7 +94,7 @@ toString
 1 1 1 1 1
 1 1 1 1 1
 
-importMaze Mazes/Unsolvable1.txt False
+importMaze Mazes/Unsolvable1.txt True
 toString
 1 1 0 1 0
 0 0 0 1 0
@@ -126,7 +126,7 @@ toString
 0 0 0 0 0
 1 1 1 0 1
 
-importMaze Mazes/Unsolvable2.txt False
+importMaze Mazes/Unsolvable2.txt True
 toString
 1 0 1 1 1
 1 1 1 1 0
@@ -158,7 +158,7 @@ toString
 0 1 1 1 0
 0 1 1 0 1
 
-importMaze Mazes/Unsolvable3.txt False
+importMaze Mazes/Unsolvable3.txt True
 toString
 1 1 1 1 1
 1 1 1 1 1
